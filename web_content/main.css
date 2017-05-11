@@ -1,0 +1,23 @@
+* {box-sizing: border-box;}
+
+.container {
+	display: grid;
+}
+
+.container .parent{
+	border: 1px solid rgb(0,95,105);
+	border-radius: 3px;
+	background-color: rgba(0,95,107);
+}
+
+.container .parent .p1{
+	border: 1px solid rgb(0,75,105);
+	border-radius: 3px;
+	background-color: rgba(0,75,107,0.8);
+}
+
+.container .parent .item{
+	border: 1px solid rgb(0,95,105);
+	border-radius: 3px;
+	background-color: rgba(0,95,60,0.8);
+}
