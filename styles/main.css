@@ -1,73 +1,162 @@
 * {box-sizing: border-box;}
 
+/*Global Styles*/
 /*Fonts*/
 @font-face {
     font-family: 'Grogo'; /*font name*/
     src: url('fonts/Vendetta.otf'); /*URL to font*/
+	
+	font-family: 'Logo1';
+	src: url('fonts/YouthBeauty.otf');
 }
 
 body{
+	background: -moz-linear-gradient(top, #2264aa 1%, #2989d8 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #2264aa 1%,#2989d8 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #2264aa 1%,#2989d8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background-repeat: no-repeat;
+	height: 100%;
 	margin: 0px;
 	font-family: verdana;
 	font-size: 12pt;
 }
 
+
+/*Header Styles*/
 header{
+	background-color: rgb(0, 102, 204);
 	display: flex;
-	border: 1px solid #333;
-	max-height: 10vw;
+	border-bottom: 1px solid #fff;
+	height: 50px;
 	max-width: 100vw;
-	margin: 0px 0px 2px;
+	/* margin-bottom: 2px; */
 	justify-content: center;
 }
 
-.nav{
-	width: 300px;
+nav{
+	display: flex;
+	width: 900px;
+	max-width: 900px;
 	padding: 0px 5px;
 	display: flex;
 	justify-content: space-between;
-	border: solid 1px #000;
+/* 	border: solid #000;
+	border-width: 0px 1px 0px 1px; */
 	align-items: center;
 }
 
-.nav p{
-	font-family: Grogo;
+h1.logo{
+	font-family: Logo1;
+	font-size: 2em;
 	padding: 0px;
 	margin: 0px;
+	color: #fff;
+	text-shadow: #000 -2px 1px 4px;
 }
 
-.nav a{
-	text-decoration: none;
+h1.logo:hover{
+	color: #000;
+	text-shadow: #fff -2px 1px 4px;
+	transition: .3s;
+	cursor: pointer;
 }
 
+.logo-container{
+	max-width: 260px;
+}
 
+.links-container{
+	max-width: 260px;
+}
 
-.main-container {
+ul.links {
 	display: flex;
-	/*display: grid;*/
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0px;
+	justify-content: flex-end;
+    flex-wrap: wrap-reverse;
+    margin: 0;
+}
+
+ul.links li{
+	margin: 0px 10px;
+}
+
+ul.links li a{
+    display: block;
+    color: white;
+    padding: 14px;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+	color: #111;
+	background-color: #fff;
+	transition: .3s;
+	
+	/* color: rgb(0, 102, 204);
+	background-color: #fff; */
+}
+/*Main Container Styles*/
+
+section{
+	display: grid;
 	justify-content: center;
 	max-width: 100vw;
-	border: 1px solid #000;
+/* 	border: 1px solid #000; */
 }
 
-.main-container .parent{
-	width: 60px;
-	margin: 0px 15px;
-	border: 1px solid rgb(0,95,105);
+.content {
+	display: flex;
+	flex-wrap: wrap-end;
+	/*display: grid;*/
+	width: 900px;
+/* 	border: solid #000;
+	border-width: 0px 1px 0px 1px; */
+}
+
+.content .parent{
+	width: 150px;
 	border-radius: 3px;
-	background-color: rgba(0,95,107);
 }
 
-.main-container .parent .p1{
-	border: 1px solid rgb(0,75,105);
+.content .parent .p1{
+	border: 1px solid yellow;
 	border-radius: 3px;
-	background-color: rgba(0,75,107,0.8);
+	background-color: red;
 }
 
-.main-container .parent .item{
+.content .parent .item{
 	align-item: center;
-	margin: 5px;
-	border: 1px solid rgb(0,95,105);
+	border: 1px solid rgb(156,156,0);
 	border-radius: 3px;
-	background-color: rgba(0,95,60,0.8);
+	background-color: rgba(236,236,0,0.8);
 }
+
+.c1{
+	background-color: #ffffff;
+	margin: 10px 0px;
+}
+
+.c2{
+	background-color: #f1f1f1;
+	margin: 10px 0;
+}
+
+/*Footer Styles*/
+
+
+/*other*/
+
+.hide{
+	display: none;
+}
+
+/* li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+} */
